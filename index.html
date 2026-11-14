@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sosáč – nasaje všetko</title>
+<meta name="description" content="Sosáč: stiahni videá, hudbu, celé kanály, GIFy a MP3. Strih, konvertor a viac v jednej appke.">
+<link rel="icon" href="assets/mini.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav"><div class="nav-in">
+  <a class="brand" href="#top"><img src="assets/mini.png" alt=""><span>Sosáč</span></a>
+  <span class="nav-sp"></span>
+  <a class="lnk" href="#funkcie">Funkcie</a>
+  <a class="lnk" href="#kupit">Kúpiť</a>
+  <a class="lnk" href="#stiahnut">Stiahnuť</a>
+  <button class="btn sm ghost" id="navAcc" type="button">Prihlásiť sa</button>
+</div></div>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <span class="pill">Sosáč 3.0 · pre Windows</span>
+      <h1>Nasaje <span class="hl">všetko.</span></h1>
+      <p class="lead">Videá, hudba, celé kanály, GIFy a MP3. Strih, konvertor a knižnica v jednej appke s maskotom, ktorý sa nikdy nezasekne.</p>
+      <div class="cta">
+        <a class="btn lg" href="#kupit">Kúpiť Sosáča</a>
+        <a class="btn lg ghost" href="#stiahnut" id="heroDl">Stiahnuť</a>
+        <small>Raz zaplatíš, updaty máš v cene.</small>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="chip c1">YouTube</span><span class="chip c2">Instagram</span>
+      <span class="chip c3">Spotify</span><span class="chip c4">MP3 · GIF</span>
+      <img src="assets/mascot.png" alt="Maskot Sosáč">
+    </div>
+  </div>
+
+  <section id="funkcie">
+    <h2 class="sec-h">Čo Sosáč vie</h2>
+    <p class="sec-s">Všetko, čo okolo sťahovania potrebuješ, bez prepínania medzi piatimi appkami.</p>
+    <div class="grid">
+      <div class="card"><div class="ic" style="background:var(--yellow)">⬇️</div><h3>Stiahnuť</h3><p>Vlož odkaz, vyber kvalitu a Sosáč nasaje video, zvuk alebo fotku.</p></div>
+      <div class="card"><div class="ic" style="background:var(--blue)">📺</div><h3>Vysávač kanálov</h3><p>Celý kanál alebo posledných X videí naraz, vo formáte, aký chceš.</p></div>
+      <div class="card"><div class="ic" style="background:var(--pink)">📸</div><h3>Sosogram</h3><p>Profily a príbehy na jednom mieste, prehľadne a rýchlo.</p></div>
+      <div class="card"><div class="ic" style="background:var(--violet)">🎵</div><h3>Sosify</h3><p>Hudba z YouTube a SoundCloudu, obľúbené a prehrávač v title bare.</p></div>
+      <div class="card"><div class="ic" style="background:var(--orange)">✂️</div><h3>Editor a MP3 strih</h3><p>Strih, text, prechody a sociálne pomery ako 9:16. Export jedným klikom.</p></div>
+      <div class="card"><div class="ic" style="background:var(--teal)">🔁</div><h3>Konvertor</h3><p>GIF, MP3 aj video s kvalitou od malej po najvyššiu.</p></div>
+    </div>
+  </section>
+
+  <section id="kupit">
+    <h2 class="sec-h" style="text-align:center">Jedna cena. Navždy tvoj.</h2>
+    <p class="sec-s" style="margin-inline:auto;text-align:center">Kúp raz, účet si vytvoríš pri nákupe. Každý nový update si potom stiahneš po prihlásení.</p>
+    <div class="price">
+      <span class="tag">Plná verzia</span>
+      <div class="amt">10<sup>€</sup></div>
+      <ul>
+        <li>Všetky funkcie bez limitov</li>
+        <li>Updaty zadarmo</li>
+        <li>Stiahnutie kedykoľvek po prihlásení</li>
+      </ul>
+      <button class="btn lg pink" id="buyBtn" type="button" style="width:100%">Kúpiť za 10 €</button>
+      <div class="msg" id="buyMsg"></div>
+    </div>
+  </section>
+
+  <section id="stiahnut">
+    <h2 class="sec-h" style="text-align:center">Stiahnuť</h2>
+    <p class="sec-s" style="margin-inline:auto;text-align:center">Sťahovanie je len pre zákazníkov. Prihlás sa účtom, s ktorým si kupoval.</p>
+    <div class="card dl" id="dlCard"></div>
+  </section>
+</main>
+
+<footer><div class="wrap">Sosáč © <span id="yr"></span> · Vyrobené s láskou a hadicou</div></footer>
+
+<!-- Prihlásenie / profil -->
+<div class="ov" id="ov" role="dialog" aria-modal="true">
+  <div class="modal" id="modal"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
